@@ -8,10 +8,7 @@ $(document).ready(()=> {
     // Initial Variables
     var computerPick = Math.floor(Math.random() * 39) + 1;
     var lockGame = false;
-
-    // We log the computer's pick to console to make it easier to troubleshoot
-    console.log("Computer Pick: " + computerPick);
-
+      document.getElementById("computer-pick").innerHTML = computerPick;
     // Here we create the on click event that gets the user"s pick
     $(".btn-choice").on("click", function() {
 
