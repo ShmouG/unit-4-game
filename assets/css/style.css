@@ -1,8 +1,14 @@
 body {
-    background-image: url("./assets/images/grid1.png" ) !important;
-background-color: rgb(209, 140, 49) !important;
+background-image: url(https://i.imgur.com/mbfR9O2.jpg) !important;
+background-color: darkslateblue;
 }
 .icon {
     width: 100px;
     height: auto;
 }
+.text-center{
+    color: blueviolet;
+}
+#numberWins, #numberLosses{
+ color: darkviolet;
+} 

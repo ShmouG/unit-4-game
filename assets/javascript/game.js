@@ -3,7 +3,7 @@
 // each ruby number adds to user number
 // if user number is greater than computer number, user loses
 // else user wins. Then new game restarts
-
+prompt("Are you worthy enough to challenge The Almighty Thanos?")
 $(document).ready(() => {
     var wins = 0;
     var losses = 0;
@@ -36,14 +36,14 @@ $(document).ready(() => {
     document.getElementById("computer-pick").innerHTML = computerPick;
 
     function yay(){
-        alert("You won!");
+        alert("You have proven yourself worthy!");
           wins++; 
           $('#numberWins').text(wins);
           reset();
         }
         //addes the losses to the userTotal
         function loser(){
-        alert ("You lose!");
+        alert ("Imbecile! You reached for the stars, but your mortal only came up with ash.");
           losses++;
           $('#numberLosses').text(losses);
           reset()
