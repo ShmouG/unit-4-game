@@ -4,36 +4,127 @@
 // if user number is greater than computer number, user loses
 // else user wins. Then new game restarts
 
-$(document).ready(()=> {
-    // Initial Variables
-    var computerPick = Math.floor(Math.random() * 39) + 1;
+$(document).ready(() => {
+    var wins = 0;
+    var losses = 0;
+    var userTotal = 0;
+    var computerPick = Math.floor(Math.random() * 59) + 19;
     var lockGame = false;
-      document.getElementById("computer-pick").innerHTML = computerPick;
-    // Here we create the on click event that gets the user"s pick
-    $(".btn-choice").on("click", function() {
+    var targetNumber = computerPick;
 
-      // Here this lockGame line prevents the user from changing the option after the game is done.
-      if (lockGame !== true) {
+//stones number value
+    var num1= Math.floor(Math.random()*11+1)
+    var num2= Math.floor(Math.random()*11+1)
+    var num3= Math.floor(Math.random()*11+1)
+    var num4= Math.floor(Math.random()*11+1)
 
-        // We get the value associated with the button the user picked from here
-        var yourPick = $(this).val();
-        console.log("Your Pick: " + yourPick);
+    function reset(){
+        // Random=Math.floor(Math.random()*101+19);
+        // console.log(Random)
+        // $('#randomNumber').text(Random);
+        num1= Math.floor(Math.random()*11+1);
+        num2= Math.floor(Math.random()*11+1);
+        num3= Math.floor(Math.random()*11+1);
+        num4= Math.floor(Math.random()*11+1);
+        userTotal= 0;
+        $('#finalTotal').text(userTotal);
+        } 
+   
+    // $('#numberWins').text(wins);
+    // $('#numberLosses').text(losses);
 
-        // We then reveal the computer's pick in the html
-        $("#computer-pick").text(computerPick);
+    document.getElementById("computer-pick").innerHTML = computerPick;
 
-        // If your pick matched the computer's pick you let them know.
-        if (parseInt(yourPick) === computerPick) {
-          $("#result").text("Yep! You got it! Refresh the page to play again.");
-          lockGame = true;
+    function yay(){
+        alert("You won!");
+          wins++; 
+          $('#numberWins').text(wins);
+          reset();
+        }
+        //addes the losses to the userTotal
+        function loser(){
+        alert ("You lose!");
+          losses++;
+          $('#numberLosses').text(losses);
+          reset()
         }
 
-        // If the numbers did not match. You also let them know
-        else {
-          $("#result").text("Nope. Refresh the page to play again.");
-          lockGame = true;
-        }
-      }
+        $('#one').on ('click', function(){
+            userTotal = userTotal + num1;
+            console.log("New userTotal= " + userTotal);
+            $('#finalTotal').text(userTotal); 
+                  //sets win/lose conditions
+                if (userTotal == computerPick){
+                  yay();
+                }
+                else if ( userTotal > computerPick){
+                  loser();
+                }   
+          })  
+          $('#two').on ('click', function(){
+            userTotal = userTotal + num2;
+            console.log("New userTotal= " + userTotal);
+            $('#finalTotal').text(userTotal); 
+                if (userTotal == computerPick){
+                  yay();
+                }
+                else if ( userTotal > computerPick){
+                  loser();
+                } 
+          })  
+          $('#three').on ('click', function(){
+            userTotal = userTotal + num3;
+            console.log("New userTotal= " + userTotal);
+            $('#finalTotal').text(userTotal);
+        //sets win/lose conditions
+                  if (userTotal == computerPick){
+                  yay();
+                }
+                else if ( userTotal > computerPick){
+                  loser();
+                } 
+          })  
+          $('#four').on ('click', function(){
+            userTotal = userTotal + num4;
+            console.log("New userTotal= " + userTotal);
+            $('#finalTotal').text(userTotal); 
+              
+                  if (userTotal == computerPick){
+                  yay();
+                }
+                else if ( userTotal > computerPick){
+                  loser();
+                }
+          });   
+        }); 
 
-    });
-});
+    // for (var i = 0; i < numberOptions.length; i++)
+    //  {
+    //     var imageCrystal = $("icon1", 'icon2', 'icon3', 'icon4');
+
+    //     imageCrystal.addClass("crystal-image");
+
+    //     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    //     $("#stone").append(imageCrystal);
+    // }
+    // $(".crystal-image").on("click", function () {
+    //     var crystalValue = ($(this).attr("data-crystalvalue"));
+    //     crystalValue = parseInt(crystalValue);
+    //     console.log("dsfs")
+
+    //     // if (lockGame !== true) {
+
+
+    //         if (parseInt(yourPick) === computerPick) {
+    //             $("#result").text("Yep! You got it! Refresh the page to play again.");
+    //             lockGame = true;
+    //         }
+
+    //         else {
+    //             $("#result").text("Nope. Refresh the page to play again.");
+    //             lockGame = true;
+
+    //         }
+    //     // }
+
+    // });

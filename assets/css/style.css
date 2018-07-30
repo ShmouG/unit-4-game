@@ -1,0 +1,8 @@
+body {
+    background-image: url("./assets/images/grid1.png" ) !important;
+background-color: rgb(209, 140, 49) !important;
+}
+.icon {
+    width: 100px;
+    height: auto;
+}
