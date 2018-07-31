@@ -5,14 +5,16 @@
 // else user wins. Then new game restarts
 $(document).ready(() => {
 
-    prompt("Are you worthy enough to challenge The Almighty Thanos?")
+    confirm("Are you worthy enough to challenge The Almighty Thanos?")
 
     var wins = 0;
     var losses = 0;
     var userTotal = 0;
     var computerPick = Math.floor(Math.random() * 59) + 19;
-    var lockGame = false;
     var targetNumber = computerPick;
+    var laugh = document.getElementById("laugh");
+    // var thanosLoser = document.getElementById("loser");
+    // var worthy = document.getElementById("worthy");
 
     //stones number value
     var num1 = Math.floor(Math.random() * 11 + 1)
@@ -46,6 +48,7 @@ $(document).ready(() => {
     //addes the losses to the userTotal
     function loser() {
         alert("Imbecile! You reached for the stars, but your mortal hands only came up with ash.");
+        laugh.play();
         losses++;
         $('#numberLosses').text(losses);
         reset()
@@ -94,6 +97,8 @@ $(document).ready(() => {
             loser();
         }
     });
+    // $('.icon').on('mouseenter', () => {
+    // })
 });
 
 // for (var i = 0; i < numberOptions.length; i++)

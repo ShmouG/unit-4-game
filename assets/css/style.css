@@ -1,14 +1,17 @@
 body {
 background-image: url(https://i.imgur.com/mbfR9O2.jpg) !important;
-background-color: darkslateblue;
+background-color: darkslateblue !important; 
 }
 .icon {
     width: 100px;
     height: auto;
 }
-.text-center{
+.text-center, p{
     color: blueviolet;
 }
 #numberWins, #numberLosses{
  color: darkviolet;
 } 
+#intsructions {
+    color: slateblue !important;
+}
