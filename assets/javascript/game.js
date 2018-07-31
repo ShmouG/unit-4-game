@@ -10,11 +10,12 @@ $(document).ready(() => {
     var wins = 0;
     var losses = 0;
     var userTotal = 0;
-    var computerPick = Math.floor(Math.random() * 59) + 19;
-    var targetNumber = computerPick;
+    var computerPick = Math.floor(Math.random() * 59) + 9;
+    // var targetNumber = computerPick;
     var laugh = document.getElementById("laugh");
     // var thanosLoser = document.getElementById("loser");
     // var worthy = document.getElementById("worthy");
+    document.getElementById("computer-pick").innerHTML = computerPick;
 
     //stones number value
     var num1 = Math.floor(Math.random() * 11 + 1)
@@ -23,7 +24,7 @@ $(document).ready(() => {
     var num4 = Math.floor(Math.random() * 11 + 1)
 
     function reset() {
-        var computerPick = Math.floor(Math.random() * 59) + 19;
+        computerPick = Math.floor(Math.random() * 59) + 9;
         console.log(computerPick)
         $('#computer-pick').text(computerPick);
         num1 = Math.floor(Math.random() * 11 + 1);
@@ -37,7 +38,6 @@ $(document).ready(() => {
     // $('#numberWins').text(wins);
     // $('#numberLosses').text(losses);
 
-    document.getElementById("computer-pick").innerHTML = computerPick;
 
     function yay() {
         alert("You have proven yourself worthy!");
