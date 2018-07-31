@@ -14,7 +14,7 @@ $(document).ready(() => {
     // var targetNumber = computerPick;
     var laugh = document.getElementById("laugh");
     // var thanosLoser = document.getElementById("loser");
-    // var worthy = document.getElementById("worthy");
+    var worthy = document.getElementById("worthy");
     document.getElementById("computer-pick").innerHTML = computerPick;
 
     //stones number value
@@ -42,6 +42,7 @@ $(document).ready(() => {
     function yay() {
         alert("You have proven yourself worthy!");
         wins++;
+        worthy.play();
         $('#numberWins').text(wins);
         reset();
     }
