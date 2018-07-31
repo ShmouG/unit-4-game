@@ -10,7 +10,7 @@ $(document).ready(() => {
     var wins = 0;
     var losses = 0;
     var userTotal = 0;
-    var computerPick = Math.floor(Math.random() * 59) + 9;
+    var computerPick = Math.floor(Math.random() * 59) + 19;
     // var targetNumber = computerPick;
     var laugh = document.getElementById("laugh");
     // var thanosLoser = document.getElementById("loser");
@@ -18,18 +18,18 @@ $(document).ready(() => {
     document.getElementById("computer-pick").innerHTML = computerPick;
 
     //stones number value
-    var num1 = Math.floor(Math.random() * 11 + 1)
-    var num2 = Math.floor(Math.random() * 11 + 1)
-    var num3 = Math.floor(Math.random() * 11 + 1)
+    var num1 = Math.floor(Math.random() * 11 + 2)
+    var num2 = Math.floor(Math.random() * 11 + 2)
+    var num3 = Math.floor(Math.random() * 11 + 2)
     var num4 = Math.floor(Math.random() * 11 + 1)
 
     function reset() {
-        computerPick = Math.floor(Math.random() * 59) + 9;
+        computerPick = Math.floor(Math.random() * 59) + 19;
         console.log(computerPick)
         $('#computer-pick').text(computerPick);
-        num1 = Math.floor(Math.random() * 11 + 1);
-        num2 = Math.floor(Math.random() * 11 + 1);
-        num3 = Math.floor(Math.random() * 11 + 1);
+        num1 = Math.floor(Math.random() * 11 + 2);
+        num2 = Math.floor(Math.random() * 11 + 2);
+        num3 = Math.floor(Math.random() * 11 + 2);
         num4 = Math.floor(Math.random() * 11 + 1);
         userTotal = 0;
         $('#finalTotal').text(userTotal);
