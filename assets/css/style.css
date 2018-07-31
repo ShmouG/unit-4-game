@@ -1,6 +1,7 @@
 body {
 background-image: url(https://i.imgur.com/mbfR9O2.jpg) !important;
 background-color: darkslateblue !important; 
+font-family: 'Sigmar One' !important; 
 }
 .icon {
     width: 100px;
@@ -13,5 +14,8 @@ background-color: darkslateblue !important;
  color: darkviolet;
 } 
 #intsructions {
-    color: slateblue !important;
+    color: rgb(124, 113, 197) !important;
+}
+.card-header{
+    color: turquoise;
 }
